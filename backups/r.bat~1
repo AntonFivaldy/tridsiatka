@@ -1,0 +1,9 @@
+echo START
+for %%i in (*.mp4) do (
+	echo FILE %%~Nxi
+	beep 2
+	call rota.cmd %%~Nxi
+)
+
+echo END
+

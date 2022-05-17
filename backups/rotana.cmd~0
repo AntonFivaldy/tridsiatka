@@ -1,0 +1,23 @@
+for %%i in (*.mp4) do (SET FILE_NAME_FULL=%%~Nxi
+SET FILE_NAME = %%~ni
+SET FILE_NAME_FULL = %%~Nxi
+SET FILE_NAME = %%~ni
+echo FILE_NAME_FULL = %FILE_NAME_FULL%
+echo FILE_NAME = %FILE_NAME%
+)
+echo FILE_NAME_FULL = %FILE_NAME_FULL%
+echo FILE_NAME = %FILE_NAME%
+# REM ffmpeg -i %FILE_NAME_FULL%  -map 0:7  %FILE_NAME%.srt
+# REM ffmpeg -i %FILE_NAME_FULL%  -vcodec h264 -acodec mp3  -vf subtitles=%FILE_NAME%.srt -map 0:0 -map 0:1 %FILE_NAME%_h264.avi
+# REM ffmpeg -i %FILE_NAME_FULL%  -vcodec h264 -acodec mp3 %FILE_NAME%%_h264.avi
+# REM ffmpeg -i  %FILE_NAME_FULL% -metadata:s:v rotate="-90" -codec copy %FILE_NAME%%_rotate.avi
+# ffmpeg -i %FILE_NAME_FULL% -vf transpose=3 -codec:a copy %FILE_NAME%_rotate.avi
+# ffmpeg -i  %FILE_NAME_FULL% -metadata:s:v rotate=0 -codec copy %FILE_NAME%%_rotate.avi
+# ffmpeg -i %FILE_NAME_FULL% -ss 0:01 %FILE_NAME%%_rotate.avi
+# ffmpeg -i %%~Nxi -ss 0:01  -codec:a copy  -codec:v copy  %%~ni%_rotate.avi
+# ffmpeg -i %%~Nxi  -vf vflip  -c:a copy    %%~ni%_v.avi
+# ffmpeg -i %%~Nxi  -vf hflip  -c:a copy    %%~ni%_HH.avi
+# ffmpeg -i %%~ni%_v.avi  -hf vflip  -c:a copy %%~ni%_rotate.avi
+# ffmpeg -i %%~Nxi -ss 0:01  -codec:a copy  -codec:v copy  %%~ni%_rotate.avi
+# ffmpeg -i %%~Nxi -ss 00:01  %%~ni%_shorted.avi
+)

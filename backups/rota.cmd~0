@@ -1,0 +1,2 @@
+echo ffmpeg %1
+ffmpeg -i %1 -ss 00:01  %1_shorted.mp4

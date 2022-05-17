@@ -1,0 +1,28 @@
+SET file_name_full1=VID20220508204135.mp4
+SET file_name_full2=VID20220508204135.mp4_hflip.mp4
+# ffmpeg -i %file_name_full% -vf transpose=3 -codec:a copy %file_name_full%%_rotate_f.avi
+# ffmpeg -i  %file_name_full% -metadata:s:v rotate=flip -codec copy %file_name_full%%_rotate_f.avi
+# ffmpeg -i  %file_name_full% -vf hflip -c:a copy  -c:v copy  %file_name_full%%_rotate_f.avi
+# ffmpeg -i  VID20220508203133_c.mp4 -vf hflip -c:a copy VID20220508203133_c_rotate_f.avi
+# ffmpeg -i VID20220508203133.mp4 -ss 4:23 VID20220508203133_c.mp4
+# ffmpeg -i VID20220508203133_c.mp4 -vf transpose=1 -c:a copy VID20220508203133_ttt.mp4
+
+# -vf vflip
+# ffmpeg -i %%~Nxi  -vf hflip  -c:a copy    %%~ni%_HH.avi
+# ffmpeg -i %file_name_full1% -vf vflip  -c:a copy %file_name_full1%_hflip.mp4
+# ffmpeg -i %file_name_full2% -hf hflip  -c:a copy %file_name_full2%_hvvflip.mp4
+#  ffmpeg -i %file_name_full1%  -vf hflip  -c:a copy %file_name_full1%_HH.avi
+# ffmpeg -i %file_name_full1%  -vf vflip  -c:a copy %file_name_full1%_VV.mp4
+# ffmpeg -i %file_name_full1%_VV.mp4 -vf hflip -c:a copy %file_name_full1%_VVHH.avi
+# ffmpeg -i VID20220508204135.mp4_HH.avi -vf hflip -c:a copy %file_name_full1%_HHVV.avi
+# ffmpeg -i VID20220508204135.mp4_HH.avi -vf hflip -c:a copy %file_name_full1%_HHVV.avi
+# ffmpeg -i VID20220508204135.mp4  -filter_complex rotate=5*PI/180:ow='iw*0.85':oh='ih*0.85' %file_name_full1%_xub.avi
+# `/Volumes/FFmpeg\ 87390-gd491d6a/ffmpeg -i input.mp4 -filter_complex rotate=5*PI/180:ow='iw*0.85':oh='ih*0.85' output.mp4`
+#  -vf "hflip,vflip,format=yuv420p" -metadata:s:v rotate=0 -codec:v libx264 -codec:a copy
+# ffmpeg -i VID20220508204135.mp4  -vf "hflip,vflip,format=yuv420p" -metadata:s:v rotate=0 -codec:v libx264 -codec:a copy  %file_name_full1%_JJJJ.avi
+# -vf "transpose=2,transpose=2,format=yuv420p" \
+# ffmpeg -i VID20220508204135.mp4 -metadata:s:v rotate=0 -codec:v libx264 -codec:a copy   %file_name_full1%_RRRR2.avi
+
+ ffmpeg -i VID20220508204135.mp4 -vf "hflip"  -codec:v libx264 -codec:a copy  %file_name_full1%_dddccRvflip,hflipDDDDDDD.avi
+
+# ffmpeg -i VID20220508214147.mp4 -ss 9:31 VID20220508214147_FFF.mp4
